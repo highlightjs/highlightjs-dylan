@@ -1,0 +1,32 @@
+{
+  "name": "highlightjs-dylan",
+  "version": "1.0.0",
+  "description": "highlight.js syntax definition for Dylan language",
+  "main": "dylan.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "files": [
+    "terraform.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/highlightjs/highlight-dylan.git"
+  },
+  "keywords": [
+    "dylan",
+    "highlight.js",
+    "highlightjs",
+    "syntax"
+  ],
+  "author": "Peter Hull <peterhull90@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/highlightjs/highlightjs-dylan/issues"
+  },
+  "homepage": "https://github.com/highlightjs/highlight-dylan#readme",
+  "devDependencies": {
+    "highlight.js": "^9.15.6",
+    "jasmine": "^3.3.1"
+  }
+}
