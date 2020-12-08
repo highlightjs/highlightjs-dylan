@@ -1,4 +1,4 @@
-const hljs = require("highlight.js/lib/highlight");
+const hljs = require("highlight.js/lib/core");
 const {
     definer: dylan
 } = require("../dylan");
