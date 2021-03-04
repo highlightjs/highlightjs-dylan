@@ -17,10 +17,9 @@ Load the module after loading Highlight.js.  You'll use the minified version fou
 
 ```html
 <script type="text/javascript" src="/path/to/highlight.min.js"></script>
-<script type="text/javascript" charset="UTF-8"
-  src="/path/to/highlightjs-dylan/dist/dylan.min.js"></script>
+<script type="text/javascript" src="/path/to/highlightjs-dylan/dist/dylan.min.js"></script>
 <script type="text/javascript">
-  hljs.initHighlightingOnLoad();
+  hljs.highlightAll();
 </script>
 ```
 
@@ -30,10 +29,9 @@ If you're using Node / Webpack / Rollup / Browserify, etc, require the language 
 
 ```javascript
 var hljs = require('highlightjs');
-var hljsRobotsTxt = require('highlightjs-dylan');
+var hljsDylan = require('highlightjs-dylan');
 
-hljs.registerLanguage("dylan", hljsRobotsTxt);
-hljs.initHighlightingOnLoad();
+hljs.registerLanguage("dylan", hljsDylan);
 ```
 
 ## License
