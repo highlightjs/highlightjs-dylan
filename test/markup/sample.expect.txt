@@ -12,14 +12,14 @@
     <span class="hljs-symbol">required-init-keyword:</span> <span class="hljs-symbol">tons:</span>;
 <span class="hljs-keyword">end</span> <span class="hljs-keyword">class</span> <span class="hljs-class">&lt;truck&gt;</span>;
 
-<span class="hljs-keyword">define</span> <span class="hljs-keyword">method</span> add (x :: <span class="hljs-class">&lt;integer&gt;</span>, y :: <span class="hljs-class">&lt;integer&gt;</span>)
+<span class="hljs-keyword">define</span> <span class="hljs-keyword">method</span> add (x :: <span class="hljs-class">&lt;integer&gt;</span>, y :: <span class="hljs-class">&lt;integer&gt;</span>) 
   =&gt; ( sum :: <span class="hljs-class">&lt;integer&gt;</span>)
  x + y
 <span class="hljs-keyword">end</span> <span class="hljs-keyword">method</span> add;
 
 <span class="hljs-keyword">define</span> function check()
   <span class="hljs-keyword">let</span> truck = make(<span class="hljs-class">&lt;truck&gt;</span>, <span class="hljs-symbol">tons:</span> <span class="hljs-number">25</span>);
-  format-out(<span class="hljs-string">&quot;%s&#x27;s truck can carry %d\n&quot;</span>,
+  format-out(<span class="hljs-string">&quot;%s&#x27;s truck can carry %d\n&quot;</span>, 
              truck.owner,
              truck.capacity);
 <span class="hljs-keyword">end</span>;

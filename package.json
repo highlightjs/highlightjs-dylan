@@ -1,14 +1,11 @@
 {
   "name": "highlightjs-dylan",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "highlight.js syntax definition for Dylan language",
-  "main": "dylan.js",
+  "main": "src/dylan.js",
   "scripts": {
     "test": "jasmine"
   },
-  "files": [
-    "terraform.js"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/highlightjs/highlight-dylan.git"
@@ -24,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/highlightjs/highlightjs-dylan/issues"
   },
-  "homepage": "https://github.com/highlightjs/highlight-dylan#readme",
-  "devDependencies": {
-    "highlight.js": "^10.4.1",
-    "jasmine": "^3.3.1"
-  }
+  "homepage": "https://github.com/highlightjs/highlight-dylan#readme"
 }
