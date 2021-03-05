@@ -28,7 +28,7 @@ Load the module after loading Highlight.js.  You'll use the minified version fou
 If you're using Node / Webpack / Rollup / Browserify, etc, require the language module, then register it with Highlight.js.
 
 ```javascript
-var hljs = require('highlightjs');
+var hljs = require('highlight.js');
 var hljsDylan = require('highlightjs-dylan');
 
 hljs.registerLanguage("dylan", hljsDylan);
