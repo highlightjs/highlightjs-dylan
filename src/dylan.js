@@ -33,13 +33,13 @@ module.exports = function(hljs) {
   const DYLAN_HASH_WORDS = ["#t", "#f", "#next", "#rest", "#key", "#all-keys", "#include"];
   const DYLAN_WORD = '[a-z\-+\*/^=#!%$_><@\?~][a-z0-9\-+\*/^=#!%$_><@\?~]*';
   const KEYWORDS = {
+    $pattern: DYLAN_WORD,
     literal: DYLAN_HASH_WORDS.join(" "),
     keyword: DYLAN_RESERVED_WORDS.join(" ")
   };
   const DYLAN_CODE = {
     case_insensitive: true,
     className: 'dylan',
-    lexemes: DYLAN_WORD,
     keywords: KEYWORDS,
     contains: [{
       className: 'class',
