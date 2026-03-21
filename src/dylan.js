@@ -48,7 +48,7 @@ module.exports = function(hljs) {
     },
     {
       className: 'symbol',
-      begin: '#' + DYLAN_WORD
+      begin: '#"' + DYLAN_WORD + '"'
     },
     {
       className: 'symbol',
