@@ -51,30 +51,31 @@ module.exports = function(hljs) {
     case_insensitive: true,
     className: 'dylan',
     keywords: KEYWORDS,
-    contains: [{
-      className: 'class',
-      begin: '<' + DYLAN_WORD + '>',
-      relevance: 0
-    },
-    {
-      className: 'symbol',
-      begin: '#"' + DYLAN_WORD + '"'
-    },
-    {
-      className: 'symbol',
-      begin: DYLAN_WORD + ':',
-      relevance: 0
-    },
-    {
-      className: 'string',
-      begin: '\'\\\\?.',
-      end: '\'',
-      illegal: '.'
-    },
-    hljs.C_NUMBER_MODE,
-    hljs.QUOTE_STRING_MODE,
-    hljs.C_LINE_COMMENT_MODE,
-    hljs.C_BLOCK_COMMENT_MODE
+    contains: [
+      {
+        className: 'class',
+        begin: '<' + DYLAN_WORD + '>',
+        relevance: 0
+      },
+      {
+        className: 'symbol',
+        begin: '#"' + DYLAN_WORD + '"'
+      },
+      {
+        className: 'symbol',
+        begin: DYLAN_WORD + ':',
+        relevance: 0
+      },
+      {
+        className: 'string',
+        begin: '\'\\\\?.',
+        end: '\'',
+        illegal: '.'
+      },
+      hljs.C_NUMBER_MODE,
+      hljs.QUOTE_STRING_MODE,
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.C_BLOCK_COMMENT_MODE
     ]
   };
 
