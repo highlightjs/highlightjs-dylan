@@ -72,7 +72,14 @@ module.exports = function(hljs) {
         end: '\'',
         illegal: '.'
       },
-      hljs.C_NUMBER_MODE,
+      {
+        scope: 'number',
+        begin: ('(#[bB][01][01_]*)'
+                + '|(#[oO][0-7][0-7_]*)'
+                + '|([-+]?[0-9][0-9_]*([.][0-9][0-9_]*([eEsSdD][0-9]+)?)?)'
+                + '|(#[xX][a-fA-F0-9][a-fA-F0-9_]*)'),
+        relevance: 0
+      },
       hljs.QUOTE_STRING_MODE,
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE
