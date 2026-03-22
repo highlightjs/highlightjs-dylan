@@ -41,7 +41,8 @@ module.exports = function(hljs) {
     DYLAN_DEFINE_LIST_WORDS
   );
   const DYLAN_HASH_WORDS = ["#t", "#f", "#next", "#rest", "#key", "#all-keys", "#include"];
-  const DYLAN_WORD = '[a-z\-+\*/^=#!%$_><@\?~][a-z0-9\-+\*/^=#!%$_><@\?~]*';
+  // If you modify this regular expression you should probably also update the one in vscode-dylan.
+  const DYLAN_WORD = '([a-zA-Z]|[0-9][a-zA-Z][a-zA-Z]|[!&*<>|^$%@_][a-zA-Z])[-+~?/=!&*<>|^$%@_a-zA-Z0-9]*';
   const KEYWORDS = {
     $pattern: DYLAN_WORD,
     literal: DYLAN_HASH_WORDS,
