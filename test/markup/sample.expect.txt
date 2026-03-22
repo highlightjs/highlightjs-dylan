@@ -19,7 +19,7 @@
   <span class="hljs-keyword">end</span> if-let
 <span class="hljs-keyword">end</span> <span class="hljs-keyword">method</span> add;
 
-<span class="hljs-keyword">define</span> function check()
+<span class="hljs-keyword">define</span> <span class="hljs-keyword">function</span> check()
   <span class="hljs-keyword">let</span> truck = make(<span class="hljs-class">&lt;truck&gt;</span>, <span class="hljs-symbol">tons:</span> <span class="hljs-number">25</span>);
   format-out(<span class="hljs-string">&quot;%s&#x27;s truck can carry %d\n&quot;</span>, 
              truck.owner,
@@ -45,7 +45,7 @@
   next-method() + t.capacity * <span class="hljs-number">10.0</span>;
 <span class="hljs-keyword">end</span> <span class="hljs-keyword">method</span>;
 
-<span class="hljs-keyword">define</span> function make-fibonacci()
+<span class="hljs-keyword">define</span> <span class="hljs-keyword">function</span> make-fibonacci()
   <span class="hljs-keyword">let</span> n = <span class="hljs-number">0</span>;
   <span class="hljs-keyword">let</span> m = <span class="hljs-number">1</span>;
   <span class="hljs-keyword">method</span> ()

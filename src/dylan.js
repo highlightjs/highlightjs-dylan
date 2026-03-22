@@ -29,9 +29,10 @@ module.exports = function(hljs) {
     "select", "unless", "until", "while"
   ];
   const DYLAN_FUNCTION_WORDS = [];
-  const DYLAN_DEFINE_BODY_WORDS = ["class", "library", "method", "module"];
+  const DYLAN_DEFINE_BODY_WORDS = ["class", "function", "library", "method", "module"];
   const DYLAN_DEFINE_LIST_WORDS = ["constant", "variable", "domain"];
-  const DYLAN_RESERVED_WORDS = [].concat(DYLAN_CORE_WORDS,
+  const DYLAN_RESERVED_WORDS = [].concat(
+    DYLAN_CORE_WORDS,
     DYLAN_BEGIN_WORDS,
     DYLAN_FUNCTION_WORDS,
     DYLAN_DEFINE_BODY_WORDS.map(function(word) {
