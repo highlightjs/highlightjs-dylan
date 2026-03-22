@@ -44,8 +44,8 @@ module.exports = function(hljs) {
   const DYLAN_WORD = '[a-z\-+\*/^=#!%$_><@\?~][a-z0-9\-+\*/^=#!%$_><@\?~]*';
   const KEYWORDS = {
     $pattern: DYLAN_WORD,
-    literal: DYLAN_HASH_WORDS.join(" "),
-    keyword: DYLAN_RESERVED_WORDS.join(" ")
+    literal: DYLAN_HASH_WORDS,
+    keyword: DYLAN_RESERVED_WORDS
   };
   const DYLAN_CODE = {
     case_insensitive: true,
