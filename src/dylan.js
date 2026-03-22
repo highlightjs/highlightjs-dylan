@@ -1,4 +1,13 @@
 /*
+Language: Dylan
+Description: Dylan language definition for highlight.js
+Author: Peter Hull <peterhull90@gmail.com>
+Category: functional
+Website: https://opendylan.org
+*/
+
+
+/*
  * highlight.js Dylan syntax highlighting definition
  *
  * @see https://github.com/highlightjs/highlight.js
