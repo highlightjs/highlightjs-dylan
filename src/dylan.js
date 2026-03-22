@@ -49,25 +49,25 @@ module.exports = function(hljs) {
   };
   const DYLAN_CODE = {
     case_insensitive: true,
-    className: 'dylan',
+    scope: 'dylan',
     keywords: KEYWORDS,
     contains: [
       {
-        className: 'class',
+        scope: 'class',
         begin: '<' + DYLAN_WORD + '>',
         relevance: 0
       },
       {
-        className: 'symbol',
+        scope: 'symbol',
         begin: '#"' + DYLAN_WORD + '"'
       },
       {
-        className: 'symbol',
+        scope: 'symbol',
         begin: DYLAN_WORD + ':',
         relevance: 0
       },
       {
-        className: 'string',
+        scope: 'string',
         begin: '\'\\\\?.',
         end: '\'',
         illegal: '.'
