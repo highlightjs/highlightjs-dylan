@@ -14,7 +14,9 @@ end class <truck>;
 
 define method add (x :: <integer>, y :: <integer>) 
   => ( sum :: <integer>)
- x + y
+  if-let (x = 99)
+    x + y
+  end if-let
 end method add;
 
 define function check()

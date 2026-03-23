@@ -14,7 +14,9 @@
 
 <span class="hljs-keyword">define</span> <span class="hljs-keyword">method</span> add (x :: <span class="hljs-class">&lt;integer&gt;</span>, y :: <span class="hljs-class">&lt;integer&gt;</span>) 
   =&gt; ( sum :: <span class="hljs-class">&lt;integer&gt;</span>)
- x + y
+  if-let (x = <span class="hljs-number">99</span>)
+    x + y
+  <span class="hljs-keyword">end</span> if-let
 <span class="hljs-keyword">end</span> <span class="hljs-keyword">method</span> add;
 
 <span class="hljs-keyword">define</span> function check()
