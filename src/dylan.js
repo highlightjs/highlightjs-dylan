@@ -1,4 +1,13 @@
 /*
+Language: Dylan
+Description: Dylan language definition for highlight.js
+Author: Peter Hull <peterhull90@gmail.com>
+Category: functional
+Website: https://opendylan.org
+*/
+
+
+/*
  * highlight.js Dylan syntax highlighting definition
  *
  * @see https://github.com/highlightjs/highlight.js
@@ -20,9 +29,10 @@ module.exports = function(hljs) {
     "select", "unless", "until", "while"
   ];
   const DYLAN_FUNCTION_WORDS = [];
-  const DYLAN_DEFINE_BODY_WORDS = ["class", "library", "method", "module"];
+  const DYLAN_DEFINE_BODY_WORDS = ["class", "function", "library", "method", "module"];
   const DYLAN_DEFINE_LIST_WORDS = ["constant", "variable", "domain"];
-  const DYLAN_RESERVED_WORDS = [].concat(DYLAN_CORE_WORDS,
+  const DYLAN_RESERVED_WORDS = [].concat(
+    DYLAN_CORE_WORDS,
     DYLAN_BEGIN_WORDS,
     DYLAN_FUNCTION_WORDS,
     DYLAN_DEFINE_BODY_WORDS.map(function(word) {
@@ -31,40 +41,49 @@ module.exports = function(hljs) {
     DYLAN_DEFINE_LIST_WORDS
   );
   const DYLAN_HASH_WORDS = ["#t", "#f", "#next", "#rest", "#key", "#all-keys", "#include"];
-  const DYLAN_WORD = '[a-z\-+\*/^=#!%$_><@\?~][a-z0-9\-+\*/^=#!%$_><@\?~]*';
+  // If you modify this regular expression you should probably also update the one in vscode-dylan.
+  const DYLAN_WORD = '([a-zA-Z]|[0-9][a-zA-Z][a-zA-Z]|[!&*<>|^$%@_][a-zA-Z])[-+~?/=!&*<>|^$%@_a-zA-Z0-9]*';
   const KEYWORDS = {
     $pattern: DYLAN_WORD,
-    literal: DYLAN_HASH_WORDS.join(" "),
-    keyword: DYLAN_RESERVED_WORDS.join(" ")
+    literal: DYLAN_HASH_WORDS,
+    keyword: DYLAN_RESERVED_WORDS
   };
   const DYLAN_CODE = {
     case_insensitive: true,
-    className: 'dylan',
+    scope: 'dylan',
     keywords: KEYWORDS,
-    contains: [{
-      className: 'class',
-      begin: '<' + DYLAN_WORD + '>',
-      relevance: 0
-    },
-    {
-      className: 'symbol',
-      begin: '#' + DYLAN_WORD
-    },
-    {
-      className: 'symbol',
-      begin: DYLAN_WORD + ':',
-      relevance: 0
-    },
-    {
-      className: 'string',
-      begin: '\'\\\\?.',
-      end: '\'',
-      illegal: '.'
-    },
-    hljs.C_NUMBER_MODE,
-    hljs.QUOTE_STRING_MODE,
-    hljs.C_LINE_COMMENT_MODE,
-    hljs.C_BLOCK_COMMENT_MODE
+    contains: [
+      {
+        scope: 'class',
+        begin: '<' + DYLAN_WORD + '>',
+        relevance: 0
+      },
+      {
+        scope: 'symbol',
+        begin: '#"' + DYLAN_WORD + '"'
+      },
+      {
+        scope: 'symbol',
+        begin: DYLAN_WORD + ':',
+        relevance: 0
+      },
+      {
+        scope: 'string',
+        begin: '\'\\\\?.',
+        end: '\'',
+        illegal: '.'
+      },
+      {
+        scope: 'number',
+        begin: ('(#[bB][01][01_]*)'
+                + '|(#[oO][0-7][0-7_]*)'
+                + '|([-+]?[0-9][0-9_]*([.][0-9][0-9_]*([eEsSdD][0-9]+)?)?)'
+                + '|(#[xX][a-fA-F0-9][a-fA-F0-9_]*)'),
+        relevance: 0
+      },
+      hljs.QUOTE_STRING_MODE,
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.C_BLOCK_COMMENT_MODE
     ]
   };
 
